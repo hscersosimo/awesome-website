@@ -9,7 +9,13 @@ ul {
     margin: 0;
 }
 
-ul li { list-style-type: none; }
+ul li { 
+    list-style-type: none; 
+}
+
+a {
+    text-decoration: none;
+}
 
 .header, .hero, .footer {
     background-color: #1F2937;
@@ -26,7 +32,7 @@ ul li { list-style-type: none; }
 }
 
 .intro h1 {
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 900;
     color: #F9FAF8;
     margin:0;
@@ -38,10 +44,10 @@ ul li { list-style-type: none; }
 }
 
 .section.info h2 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 900;
     color: #1F2937;
-    margin:0;
+    margin:10px 0 40px 0;
     padding:0;
 }
 
@@ -50,24 +56,28 @@ ul li { list-style-type: none; }
 }
 
 .section.comments .quote {
-    font-size: 36px;
+    font-size: 26px;
     font-style: italic;
-    font-weight: 300;
+    font-weight: lighter;
     color: #1F2937;
 }
 
-.section.cta, .section.cta button  { 
-    background-color: #3882F6;
-}
-
-.section.cta h2 {
-    margin:0;
-    padding:0;
+.section.cta h3 {
+    margin: 0;
+    padding: 0;
 }
 
 .hero .placeholder { 
-    width: 400px; height: 200px; 
+    width: 500px; height: 250px; 
     background-color: gray;
+    margin-left: 40px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    border: 5px solid #3882F6;
+    border-radius: 15px;
 }
 
 /* Solution */
@@ -84,7 +94,7 @@ body {
     margin-top:auto;
 }
 
-.header, .footer {
+.header, .footer, .hero, .section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,10 +107,10 @@ body {
     display: flex;
 }
 
-.header .wrapper {
+.header .wrapper, .hero .wrapper {
     justify-content: space-between;
 }
-.footer .wrapper {
+.footer .wrapper  {
     justify-content: center;
 }
 
@@ -110,9 +120,71 @@ body {
     gap:20px;
 }
 
+.section.info { 
+    flex-direction: column;
+    padding: 50px;
+}
+.section.info .wrapper {
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.card { 
+    width: 200px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.section.comments .wrapper {
+    width:100%;
+    max-width: 800px;  
+    padding:50px 0;
+    flex-direction: column;
+}
 
+.author {
+    font-weight: 900;
+    margin-top: 20px;
+    text-align: right;
+}
 
+.section.cta .wrapper, .section.cta button  { 
+    background-color: #3882F6;
+}
 
+.section.cta .wrapper {
+    border-radius: 15px;
+    padding: 50px;
+    color: #E5E7EB;
+    width:100%;
+    max-width: 1200px;  
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.section.cta .btn-container { 
+    display: flex;
+    justify-content: center;
+    align-items : center; 
+}
+
+.section.cta p { 
+    margin-top: 5px; 
+}
+
+.section.cta a, .intro a { 
+    background-color: #3882F6;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 40px;
+}
+
+.intro a { 
+    border: none;
+}
+
+.intro div { margin-top: 40px;}
